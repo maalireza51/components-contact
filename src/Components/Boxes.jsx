@@ -10,19 +10,19 @@ export default class Boxes extends Component {
                 { id: 3, title: 'box3' },
                 { id: 4, title: 'box4' },
             ],
-            activeBoxes: [1,2, 3, 4]
+            activeBoxes: [1, 2, 3, 4]
         }
         this.handleChange = this.handleChange.bind(this);
     }
-    handleChange({target},id) {
+    handleChange({ target }, id) {
         const activeBoxes = [...this.state.activeBoxes];
-        if(activeBoxes.includes(id)){
-            activeBoxes.splice(activeBoxes.indexOf(id),1);
-        }else{
+        if (activeBoxes.includes(id)) {
+            activeBoxes.splice(activeBoxes.indexOf(id), 1);
+        } else {
             activeBoxes.push(id);
         }
-        this.setState(state=>{
-            return{
+        this.setState(state => {
+            return {
                 ...state,
                 activeBoxes
             }
@@ -34,7 +34,7 @@ export default class Boxes extends Component {
                 <div className="toggle-button-cover">
                     <div className="button-cover">
                         <div className="button b2" id="button">
-                            <input type="checkbox" className="checkbox" onClick={(e) => this.handleChange(e,box.id)} defaultChecked={!this.state.activeBoxes.includes(box.id)} />
+                            <input type="checkbox" className="checkbox" onClick={(e) => this.handleChange(e, box.id)} defaultChecked={!this.state.activeBoxes.includes(box.id)} />
                             <div className="knobs">
                                 <span></span>
                             </div>
