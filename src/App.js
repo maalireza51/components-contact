@@ -3,7 +3,7 @@ import Boxes from './Components/Boxes.jsx'
 import './styles.css'
 
 export default function App() {
-  return (
-    <Boxes/>
-  )
+    return (
+        <Boxes />
+    )
 }

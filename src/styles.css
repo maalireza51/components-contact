@@ -204,7 +204,7 @@ aside .box {
 }
 
 @keyframes fadein {
-    0% {        
+    0% {
         opacity: 0;
         max-width: 0;
         min-width: 0;
