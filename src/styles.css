@@ -1,0 +1,192 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#root{
+    display: flex;
+}
+
+aside{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    border-right: 1px solid #ccc;
+}
+
+aside .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    flex: 1 0 0%;
+    margin: 20px;
+    height: 100px;
+    background-color: #03a9f4;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.toggle-button-cover {
+    display:block;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+  }
+  
+  .button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+  
+  .button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+  }
+  
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+  }
+  
+  .button.r,
+  .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  .button.b2 {
+    border-radius: 2px;
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -ms-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+}
+
+  /* Button 11 */
+#button {
+    overflow: visible;
+  }
+  
+  #button .knobs {
+    perspective: 70px;
+  }
+  
+  #button .knobs:before,
+  #button .knobs:after,
+  #button .knobs span {
+    position: absolute;
+    top: 4px;
+    border-radius: 2px;
+  }
+  
+  #button .knobs:before,
+  #button .knobs:after {
+    width: 20px;
+    height: 10px;
+    color: #4e4e4e;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+  }
+  
+  #button .knobs:before {
+    content: "YES";
+    left: 4px;
+  }
+  
+  #button .knobs:after {
+    content: "NO";
+    right: 4px;
+  }
+  
+  #button .knobs span {
+    right: 4px;
+    width: 33px;
+    height: 28px;
+    background-color: #03a9f4;
+    transform: rotateY(0);
+    transform-origin: 0% 50%;
+    transition: 0.6s ease all;
+    z-index: 1;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    -webkit-transition: 0.6s ease all;
+    -moz-transition: 0.6s ease all;
+    -ms-transition: 0.6s ease all;
+    -o-transition: 0.6s ease all;
+}
+  
+  #button .checkbox:checked + .knobs span {
+    transform: rotateY(-180deg);
+    background-color: #f44336;
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    -ms-transform:rotateY(-180deg);
+    -o-transform:rotateY(-180deg);
+}
+  
+  #button .checkbox:checked ~ .layer {
+    background-color: #fcebeb;
+  }
+  
