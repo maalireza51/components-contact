@@ -9,6 +9,7 @@ body{
 }
 
 aside{
+    direction: rtl;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -28,6 +29,7 @@ aside .box{
     align-items: center;
     height: 100px;
     min-width: 100px;
+    max-width: 250px;
     margin: 20px;
     font-size: 24px;
     color: #fff;
