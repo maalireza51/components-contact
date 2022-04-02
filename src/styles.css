@@ -208,12 +208,14 @@ aside .box {
         opacity: 0;
         max-width: 0;
         min-width: 0;
+        height: 0;
     }
 
     50% {
         opacity: 0;
         max-width: 250px;
         min-width: 100px;
+        height: 100px;
     }
 
     100% {
