@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react'
 import React, { Component } from 'react'
+import Box from './Box';
 
 export default class Sidebar extends Component {
     constructor(props) {
@@ -8,11 +9,7 @@ export default class Sidebar extends Component {
     render() {
         const boxes = this.props.boxes.map(box => {
             if (this.props.activeBoxes.includes(box.id)) {
-                return (
-                    <div className="box">
-                        {box.title}
-                    </div>
-                )
+                return <Box title={box.title} />
             }
         })
 
