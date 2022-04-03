@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Sidebar from './Sidebar';
 
 export default class Boxes extends Component {
     constructor(props) {
@@ -44,21 +45,14 @@ export default class Boxes extends Component {
                 </div>
             )
         });
-        const boxes = this.state.boxes.map(box => {
-            if (this.state.activeBoxes.includes(box.id)) {
-                return (
-                    <div className="box">
-                        {box.title}
-                    </div>
-                )
-            }
-        })
+
 
         return (
             <>
-                <aside>
-                    {boxes}
-                </aside>
+                <Sidebar
+                    activeBoxes={this.state.activeBoxes}
+                    boxes={this.state.boxes}
+                />
                 <main>
                     {toggles}
                 </main>
